@@ -1,6 +1,4 @@
-* LIF (Leaky Integrate-and-Fire) Neuron Implementation based on provided schematic
-* Using TSMC 180nm Technology with cmosn and cmosp models
-
+LIF neuron in CMOS
 * Include TSMC 180nm model file
 .include "tsmc_180nm.txt"
 
@@ -16,6 +14,7 @@ Vss vss 0 DC 0
 .param Cm_val=1p     ; Membrane capacitance
 
 * Stimuli for control signals
+*pulse vl vt tdelay trise tfall pulsewidth period
 Vclk clk 0 PULSE(0 1.8 10m 1n 1n 5m 20m)    ; Clock signal
 Vth_bias vth 0 DC {Vth}                     ; Threshold bias voltage
 
